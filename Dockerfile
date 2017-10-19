@@ -61,10 +61,10 @@ RUN mkdir /var/www/public && \
 
 # Copy the app files
 COPY . /tmp/app
-RUN chmod -R g+w /tmp/app && \
-    chown -R 1001:0 /tmp/app && \
-    cp -a /tmp/app/. /var/www && \
-    rm -rf /tmp/app && \
+RUN chmod -R g+w /var/www/public && \
+    chown -R 1001:0 /var/www/public && \
+    # cp -a /tmp/app/. /var/www && \
+    # rm -rf /tmp/app && \
     # composer dump-autoload --optimize && \
     chmod +x /var/www/start.sh
 
