@@ -15,6 +15,7 @@ elif [ "$ENTRYPOINT" = "schedule_run" ]; then
 elif [ -z "$ENTRYPOINT" ] || "$ENTRYPOINT" = "web" ]
 then
   echo Starting web
+  cp /tmp/config/local.xml /var/www/public/app/etc
   /usr/bin/supervisord -c /supervisord.conf
 
 else
