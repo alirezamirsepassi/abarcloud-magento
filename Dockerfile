@@ -5,7 +5,7 @@ FROM alpine:3.6
 
 ENV TZ=Asia/Tehran \
     # You can find the php5 packages here: http://dl-cdn.alpinelinux.org/alpine/v3.6/community/x86_64/
-    ADDITIONAL_PACKAGES="php5-pdo_pgsql php5-pdo_mysql" \
+    ADDITIONAL_PACKAGES="php5-pdo_pgsql php5-pdo_mysql php5-mcrypt php5-curl php5-gd php5-soap" \
     PHP_MEMORY_LIMIT=128M \
     PHP_UPLOAD_MAX_SILE_SIZE=50M \
     MAGENTO_VERSION="1.9.2.4" \
