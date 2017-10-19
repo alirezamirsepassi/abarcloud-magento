@@ -50,8 +50,8 @@ RUN apk update && \
 EXPOSE 8080
 WORKDIR /var/www
 
-# COPY supervisord.conf /
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY supervisord.conf /
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 # COPY composer.json composer.lock ./
 # RUN composer install --no-scripts --no-autoloader --prefer-dist --no-dev --working-dir=/var/www
 
