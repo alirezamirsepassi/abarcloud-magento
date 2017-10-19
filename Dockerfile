@@ -66,7 +66,7 @@ RUN chmod -R g+w /tmp/app && \
     chown -R 1001:0 /tmp/app && \
     cp -a /tmp/app/. /var/www && \
     rm -rf /tmp/app && \
-    composer dump-autoload --optimize && \
+    # composer dump-autoload --optimize && \
     chmod +x /var/www/start.sh
 
 CMD ["./start.sh"]
