@@ -47,7 +47,7 @@ RUN apk update && \
     apk del tzdata && \
     rm -rf /var/cache/apk/*
 
-EXPOSE 8080
+EXPOSE 80
 WORKDIR /var/www
 
 COPY supervisord.conf /
