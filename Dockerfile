@@ -13,7 +13,7 @@ ENV TZ=Asia/Tehran \
 
 RUN apk update && \
     # Install required packages - you can find any additional packages here: https://pkgs.alpinelinux.org/packages
-    apk add tzdata curl bash ca-certificates rsync supervisor nginx nano htop \
+    apk add tzdata curl bash ca-certificates rsync supervisor nginx nano \
             php5 php5-fpm php5-common php5-openssl php5-bcmath \
             php5-dom php5-cli php5-pdo php5-json php5-phar \
             php5-iconv php5-zlib php5-ctype php5-xml ${ADDITIONAL_PACKAGES} && \
