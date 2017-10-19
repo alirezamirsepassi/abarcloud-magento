@@ -8,7 +8,6 @@ ENV TZ=Asia/Tehran \
     ADDITIONAL_PACKAGES="php5-pdo_pgsql php5-pdo_mysql php5-mcrypt php5-curl php5-gd php5-soap" \
     PHP_MEMORY_LIMIT=2048M \
     PHP_UPLOAD_MAX_SILE_SIZE=50M \
-    MAGENTO_VERSION="1.9.2.4" \
     PHP_POST_MAX_SIZE=50M
 
 RUN apk update && \
@@ -56,9 +55,9 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # RUN composer install --no-scripts --no-autoloader --prefer-dist --no-dev --working-dir=/var/www
 
 RUN mkdir /var/www/public && \
-    curl https://codeload.github.com/OpenMage/magento-mirror/tar.gz/$MAGENTO_VERSION -o $MAGENTO_VERSION.tar.gz && \
-    tar xvf $MAGENTO_VERSION.tar.gz && \
-    mv magento-mirror-$MAGENTO_VERSION/* magento-mirror-$MAGENTO_VERSION/.htaccess /var/www/public
+    curl https://blog.abzarmart.com/dev/magento-1.9.3.1-2016-11-14-06-00-42.tar.bz2 -o magento-1.9.3.1-2016-11-14-06-00-42.tar.bz2 && \
+    tar xvf magento-1.9.3.1-2016-11-14-06-00-42.tar.bz2 && \
+    mv magento/* magento/.htaccess /var/www/public
 
 # Copy the app files
 COPY . /tmp/app
